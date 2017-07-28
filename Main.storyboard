@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="pro8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qZc-kS-q1u"/>
+                        <viewControllerLayoutGuide type="bottom" id="SGQ-Ot-Pno"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="JqR-fD-mQx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="words.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="iN3-s5-7wd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <view hidden="YES" clipsSubviews="YES" alpha="0.5" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-gz-Ftk">
+                                        <rect key="frame" x="87" y="232" width="201" height="203"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="VzZ-XT-f4O" appends="YES" id="pyl-GT-pUV"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6U3-gz-Ftk" firstAttribute="centerY" secondItem="JqR-fD-mQx" secondAttribute="centerY" id="05U-pi-pnf"/>
+                                    <constraint firstItem="6U3-gz-Ftk" firstAttribute="centerX" secondItem="JqR-fD-mQx" secondAttribute="centerX" id="0E1-Or-PjR"/>
+                                    <constraint firstAttribute="bottom" secondItem="6U3-gz-Ftk" secondAttribute="bottom" constant="232" id="1Zb-r5-IqT"/>
+                                    <constraint firstAttribute="trailing" secondItem="6U3-gz-Ftk" secondAttribute="trailing" constant="87" id="EjR-ba-Ou5"/>
+                                    <constraint firstItem="iN3-s5-7wd" firstAttribute="top" secondItem="JqR-fD-mQx" secondAttribute="top" id="VOB-uQ-nKR"/>
+                                    <constraint firstItem="6U3-gz-Ftk" firstAttribute="top" secondItem="JqR-fD-mQx" secondAttribute="top" constant="232" id="Z4O-GS-jqO"/>
+                                    <constraint firstItem="iN3-s5-7wd" firstAttribute="leading" secondItem="JqR-fD-mQx" secondAttribute="leading" id="d4K-33-S24"/>
+                                    <constraint firstAttribute="bottom" secondItem="iN3-s5-7wd" secondAttribute="bottom" id="dDZ-3l-5SF"/>
+                                    <constraint firstItem="6U3-gz-Ftk" firstAttribute="leading" secondItem="JqR-fD-mQx" secondAttribute="leading" constant="87" id="luc-Ao-1kq"/>
+                                    <constraint firstAttribute="trailing" secondItem="iN3-s5-7wd" secondAttribute="trailing" id="qKa-tl-dDf"/>
+                                </constraints>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-nn-Mx2">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="Album" id="TKF-eA-lQN">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="album:" destination="BYZ-38-t0r" id="6gz-VA-MXr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="crop" width="243" id="XcK-fb-Fxc">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="cropping:" destination="BYZ-38-t0r" id="nGZ-XC-raV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PAk-Gv-oeI"/>
+                                    <barButtonItem title="shoot" id="GOG-ga-7sn">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="shoot:" destination="BYZ-38-t0r" id="b4t-2u-hmu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JqR-fD-mQx" secondAttribute="trailing" id="7Dy-Ds-w4Z"/>
+                            <constraint firstItem="JqR-fD-mQx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CVy-2B-yYo"/>
+                            <constraint firstItem="JqR-fD-mQx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gmW-kn-WMp"/>
+                            <constraint firstItem="SGQ-Ot-Pno" firstAttribute="top" secondItem="JqR-fD-mQx" secondAttribute="bottom" id="u03-Wm-ttp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="crop" destination="6U3-gz-Ftk" id="Oo0-f3-tbN"/>
+                        <outlet property="imageView" destination="iN3-s5-7wd" id="lMh-Mp-QuU"/>
+                        <outlet property="scroll" destination="JqR-fD-mQx" id="jHu-oT-wDs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="VzZ-XT-f4O">
+                    <connections>
+                        <action selector="pangest:" destination="BYZ-38-t0r" id="YKx-yC-G0q"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--View Controller1-->
+        <scene sceneID="SRl-zc-FrM">
+            <objects>
+                <viewController storyboardIdentifier="view" id="Slh-hR-27F" customClass="ViewController1" customModule="pro8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xsq-S5-JMK"/>
+                        <viewControllerLayoutGuide type="bottom" id="aOJ-iu-22L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nHY-Zr-kWe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrO-nS-wOM">
+                                <rect key="frame" x="130" y="592" width="115" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="HOME">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.42004638910293579" green="0.080055736005306244" blue="0.12228616327047348" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="home:" destination="Slh-hR-27F" eventType="touchUpInside" id="w1r-oU-r92"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nDS-4R-wD6">
+                                <rect key="frame" x="62" y="157" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="nDS-4R-wD6" id="H01-Bf-e4k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hu-O2-Ou8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="words.jpg" width="500" height="500"/>
+    </resources>
+</document>
